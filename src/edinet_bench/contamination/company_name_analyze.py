@@ -1,6 +1,7 @@
 import json
 import argparse
 from edinet_bench.model import MODEL_TABLE
+from edinet_bench.model import OpenAIModel
 
 
 def parse_args():
@@ -19,6 +20,27 @@ def parse_args():
     )
 
     return parser.parse_args()
+
+
+def llm_as_a_judge(label: str, prediction: str) -> bool:
+    model = OpenAIModel(model_name="gpt-4o-2024-05-13")
+    prompt = f"""
+    Please evaluate the accuracy of the predicted company name.
+    Ground truth: {label}
+    Prediction: {prediction}
+    Respond with either 0 or 1 based on the following criteria:
+    Variations in notation (e.g., presence or absence of "Inc.", full-width/half-width characters, symbols, kana conversions, etc.) are acceptable.
+    Return 0 if the prediction clearly refers to a different company.
+    Return 1 if the prediction refers to the same company.
+    Only output a single number: 0 or 1.
+    """
+    print(prompt)
+    response = model.get_completion(prompt)
+    response = response.strip()
+    print(response)
+    if response not in ["0", "1"]:
+        raise ValueError(f"Invalid response: {response}")
+    return response == "1"
 
 
 if __name__ == "__main__":
@@ -42,9 +64,8 @@ if __name__ == "__main__":
     correct_num = 0
 
     for label, prediction in zip(labels, predictions):
-        if label in prediction:
-            print(label, prediction)
-            correct_num += 1
+        score = llm_as_a_judge(label, prediction)
+        correct_num += score
 
     acc = correct_num / len(labels)
     print(round(acc, 4))
