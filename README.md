@@ -9,7 +9,7 @@ This dataset is built leveraging [EDINET](https://disclosure2.edinet-fsa.go.jp),
   <figcaption> Overview of EDINET-Bench. </figcaption>
 </figure>
 
-For the dataset construction code, please visit at https://github.com/SakanaAI/edinet2dataset.
+For the dataset construction code, please visit https://github.com/SakanaAI/edinet2dataset.
 
 ## Install
 Install the dependencies using uv.
