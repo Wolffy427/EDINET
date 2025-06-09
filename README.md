@@ -1,5 +1,5 @@
 # EDINET-Bench
-📚 [Paper](https://pub.sakana.ai/edinet-bench) | 📝 [Blog](https://sakana.ai/edinet-bench/) | 🧑‍💻 [Code](https://github.com/SakanaAI/EDINET-Bench)
+📚 [Paper](https://pub.sakana.ai/edinet-bench) | 📝 [Blog](https://sakana.ai/edinet-bench/)
 
 This code can be used to evaluate LLMs on [EDINET-Bench](https://huggingface.co/datasets/SakanaAI/EDINET-Bench), a Japanese financial benchmark designed to evaluate the performance of LLMs on challenging financial tasks including accounting fraud detection, earnings forecasting, and industry prediction.
 This dataset is built leveraging [EDINET](https://disclosure2.edinet-fsa.go.jp), a platform managed by the Financial Services Agency (FSA) of Japan that provides access to disclosure documents such as securities reports.
