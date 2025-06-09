@@ -53,5 +53,12 @@ $ python src/edinet_bench/industry_prediction/make_leaderboard.py
 
 ## Citation
 ```
-TODO:
+@misc{sugiura2025edinet,
+  author    = {Issa Sugiura and Takashi Ishida and Taro Makino and Chieko Tazuke and Takanori Nakagawa and Kosuke Nakago and David Ha},
+  title     = {{EDINET-Bench: Evaluating LLMs on Complex Financial Tasks using Japanese Financial Statements}},
+  institution = {Sakana AI},
+  year      = {2025},
+  month     = {June},
+  url = {https://pub.sakana.ai/edinet-bench}
+}
 ```
