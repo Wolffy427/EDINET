@@ -17,11 +17,7 @@ authors:
     given-names: Kosuke
   - family-names: Ha
     given-names: David
-institution:
-  name: "Sakana AI"
-date-released: 2025-06-06
 url: "https://arxiv.org/abs/2506.08762"
-repository-code: "https://github.com/SakanaAI/edinet-bench"
 keywords:
   - "financial analysis"
   - "large language models"
