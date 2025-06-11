@@ -20,7 +20,7 @@ authors:
 institution:
   name: "Sakana AI"
 date-released: 2025-06-06
-url: "https://pub.sakana.ai/edinet-bench"
+url: "https://arxiv.org/abs/2506.08762"
 repository-code: "https://github.com/SakanaAI/edinet-bench"
 keywords:
   - "financial analysis"
