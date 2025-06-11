@@ -1,5 +1,5 @@
 # EDINET-Bench
-📚 [Paper](https://pub.sakana.ai/edinet-bench) | 📝 [Blog](https://sakana.ai/edinet-bench/) | 📁 [Dataset](https://huggingface.co/datasets/SakanaAI/EDINET-Bench)
+📚 [Paper](https://arxiv.org/abs/2506.08762) | 📝 [Blog](https://sakana.ai/edinet-bench/) | 📁 [Dataset](https://huggingface.co/datasets/SakanaAI/EDINET-Bench)
 
 This code can be used to evaluate LLMs on [EDINET-Bench](https://huggingface.co/datasets/SakanaAI/EDINET-Bench), a Japanese financial benchmark designed to evaluate the performance of LLMs on challenging financial tasks including accounting fraud detection, earnings forecasting, and industry prediction.
 This dataset is built leveraging [EDINET](https://disclosure2.edinet-fsa.go.jp), a platform managed by the Financial Services Agency (FSA) of Japan that provides access to disclosure documents such as securities reports.
@@ -55,11 +55,12 @@ $ python src/edinet_bench/industry_prediction/make_leaderboard.py
 ## Citation
 ```
 @misc{sugiura2025edinet,
-  author    = {Issa Sugiura and Takashi Ishida and Taro Makino and Chieko Tazuke and Takanori Nakagawa and Kosuke Nakago and David Ha},
-  title     = {{EDINET-Bench: Evaluating LLMs on Complex Financial Tasks using Japanese Financial Statements}},
-  institution = {Sakana AI},
-  year      = {2025},
-  month     = {June},
-  url = {https://pub.sakana.ai/edinet-bench}
+  author={Issa Sugiura and Takashi Ishida and Taro Makino and Chieko Tazuke and Takanori Nakagawa and Kosuke Nakago and David Ha},
+  title={{EDINET-Bench: Evaluating LLMs on Complex Financial Tasks using Japanese Financial Statements}},
+  year={2025},
+  eprint={2506.08762},
+  archivePrefix={arXiv},
+  primaryClass={q-fin.ST},
+  url={https://arxiv.org/abs/2506.08762}, 
 }
 ```
