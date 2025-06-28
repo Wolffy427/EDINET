@@ -98,7 +98,7 @@ class OpenRouterModel(Model):
     ):
         self.model_name = model_name
         self.client = OpenAI(
-            base_url="https://openrouter.ai/api/v1",
+            base_url="https://api.chatgptsb.com/v1",
             api_key=os.environ.get("OPENROUTER_API_KEY"),
         )
         self.system_prompt = system_prompt
@@ -127,16 +127,17 @@ MODEL_TABLE: dict[str, Model] = {
     "claude-3-5-sonnet-20241022": AnthropicModel,
     "claude-3-7-sonnet-20250219": AnthropicModel,
     "claude-3-5-haiku-20241022": AnthropicModel,
-    "gpt-4o-2024-11-20": OpenAIModel,
+    "gpt-4o-2024-11-20": OpenRouterModel,
     "o4-mini-2025-04-16": OpenAIModel,
     "deepseek/deepseek-r1": OpenRouterModel,
     "deepseek/deepseek-chat": OpenRouterModel,
+    "deepseek-r1": OpenRouterModel
 }
 
 
 if __name__ == "__main__":
     # Example usage
-    model_id = "claude-3-5-haiku-20241022"
+    model_id = "gpt-4o-2024-11-20"
     model = MODEL_TABLE[model_id](
         model_name=model_id,
         system_prompt="You are a helpful assistant.",
